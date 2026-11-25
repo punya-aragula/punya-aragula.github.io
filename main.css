@@ -17,8 +17,8 @@
   --apricot: #F5C48A;
   --lemon: #F0E3A0;
   --wash: rgba(156, 207, 239, 0.1);
-  --f-head: "Noto Sans", system-ui, sans-serif;
-  --f-text: "Atkinson Hyperlegible Next", system-ui, sans-serif;
+  --f-head: "Lexend", system-ui, sans-serif;
+  --f-text: "Atkinson Hyperlegible", system-ui, sans-serif;
   --f-mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
   --side-w: 300px;
 }
@@ -96,11 +96,7 @@ p { margin: 0; }
   font: 0.78rem var(--f-mono); padding: 6px 12px; border-radius: 6px; cursor: pointer;
 }
 .mode:hover { color: var(--ink); border-color: var(--ink-soft); }
-.mode-icon { width: 15px; height: 15px; flex: none; }
-.mode .icon-moon { display: none; }            /* dark mode shows the sun: "go to light" */
-:root.light .mode .icon-sun { display: none; }  /* light mode shows the moon: "go to dark" */
-:root.light .mode .icon-moon { display: inline; }
-.mode:focus-visible { outline: 2px solid var(--sea); outline-offset: 3px; }
+.mode-dot { width: 10px; height: 10px; border-radius: 50%; background: linear-gradient(90deg, var(--ink) 50%, transparent 50%); border: 1px solid var(--ink); }
 
 /* ---------- Content column ---------- */
 .content { padding: 64px clamp(24px, 6vw, 88px) 40px; max-width: 900px; }
@@ -256,4 +252,6 @@ p { margin: 0; }
 .did { margin: 4px 0 0; padding-left: 18px; display: grid; gap: 4px; max-width: 68ch; }
 .did li::marker { color: var(--sea); }
 .methods { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.credit { margin-top: 4px; font-size: 0.8rem; }
 @media (max-width: 980px) { .methods { grid-template-columns: 1fr; } }
+.rows .row:first-child { border-top: 0; padding-top: 0; }
