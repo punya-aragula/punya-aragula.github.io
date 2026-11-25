@@ -1,432 +1,294 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<meta content="dark light" name="color-scheme"/>
-<meta content="#161B22" name="theme-color"/>
-<meta content="Punya S. Aragula is an HCI researcher and PhD student at UNC Chapel Hill who studies how people live with AI, and what their experiences should teach us about how AI is evaluated and governed." name="description"/>
-<meta content="website" property="og:type"/>
-<meta content="Punya S. Aragula" property="og:title"/>
-<meta content="HCI research on AI measurement, sociotechnical alignment, and people-centered AI governance." property="og:description"/>
-<meta content="https://punya-aragula.github.io/" property="og:url"/>
-<meta content="https://punya-aragula.github.io/og-cover.png" property="og:image"/>
-<meta content="summary_large_image" name="twitter:card"/>
-<link href="https://punya-aragula.github.io/" rel="canonical"/>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Punya S. Aragula · HCI Researcher, UNC Chapel Hill</title>
-<link href="favicon.svg" rel="icon" type="image/svg+xml"/>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
-<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&amp;family=JetBrains+Mono:wght@400;600&amp;family=Lexend:wght@300..700&amp;display=swap" rel="stylesheet"/>
-<link href="styles.css" rel="stylesheet"/>
+<meta name="description" content="Punya S. Aragula is an HCI researcher and PhD student at UNC Chapel Hill who studies how people live with AI, and what their experiences should teach us about how AI is evaluated and governed.">
+<meta name="color-scheme" content="dark light">
+<meta name="theme-color" content="#161B22">
+<link rel="canonical" href="https://punya-aragula.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://punya-aragula.github.io/">
+<meta property="og:title" content="Punya S. Aragula">
+<meta property="og:description" content="How people live with AI, and what that should teach us about how AI is evaluated and governed.">
+<meta property="og:image" content="https://punya-aragula.github.io/og-cover.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&amp;family=JetBrains+Mono:wght@400;600&amp;family=Lexend:wght@300..700&amp;display=swap">
+<link rel="stylesheet" href="main.css">
 <script>
-  // apply saved theme before paint (avoids a flash)
-  try { var t = localStorage.getItem('theme'); if (t === 'dark' || t === 'light') document.documentElement.dataset.theme = t; } catch (e) {}
+  /* pick up a saved light/dark choice before the page paints */
+  try { if (localStorage.getItem('pa-theme') === 'light') document.documentElement.classList.add('light'); } catch (e) {}
 </script>
-<script defer="" src="site.js"></script>
+<script src="main.js" defer></script>
 <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Punya Shamsunder Aragula",
-    "jobTitle": "PhD Student, Information Science",
-    "email": "mailto:punyara@unc.edu",
-    "affiliation": {
-      "@type": "Organization",
-      "name": "School of Data and Information Science, University of North Carolina at Chapel Hill"
-    },
-    "alumniOf": [
-      {"@type": "CollegeOrUniversity", "name": "Iowa State University"},
-      {"@type": "CollegeOrUniversity", "name": "National Forensic Sciences University"},
-      {"@type": "CollegeOrUniversity", "name": "Azim Premji University"}
-    ],
-    "knowsAbout": ["Human-Computer Interaction", "AI Measurement and Evaluation", "Sociotechnical AI Alignment", "AI Governance", "Trust in Generative AI", "Capability Approach"],
-    "url": "https://punya-aragula.github.io/",
-    "sameAs": ["https://www.linkedin.com/in/punyasa", "https://github.com/punya-aragula"]
-  }
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Punya Shamsunder Aragula",
+  "url": "https://punya-aragula.github.io/",
+  "email": "mailto:punyara@unc.edu",
+  "jobTitle": "PhD Student, Information Science",
+  "affiliation": {"@type": "CollegeOrUniversity", "name": "University of North Carolina at Chapel Hill"},
+  "sameAs": ["https://www.linkedin.com/in/punyasa", "https://github.com/punya-aragula"]
+}
 </script>
 </head>
 <body>
-<a class="skip-link" href="#main">Skip to content</a>
-<div class="site-shell">
+<a class="jump" href="#content">Skip to content</a>
 
-<header class="site-header" id="top">
-  <a aria-label="Punya Aragula, back to top" class="wordmark" href="#top">
-    <img alt="" aria-hidden="true" class="wordmark-icon" src="favicon.svg"/>
-    <span class="wordmark-label">Punya <em>Aragula</em></span>
-  </a>
-  <nav aria-label="Main navigation" class="desktop-nav">
-    <a href="#about">About</a>
-    <a href="#research">Research</a>
-    <a href="#experience">Experience</a>
-    <a href="#education">Education</a>
-    <a href="#service">Service</a>
-    <a href="#offtheclock">Life</a>
-    <a href="#contact">Contact</a>
-  </nav>
-  <div class="header-actions">
-    <button aria-label="Switch to light theme" class="theme-toggle" id="theme-toggle" title="Switch light / dark" type="button">
-      <span aria-hidden="true" class="moon-icon">🌙</span><span aria-hidden="true" class="sun-icon">🌞</span>
-    </button>
-    <button aria-controls="mobile-nav" aria-expanded="false" aria-label="Open navigation" class="menu-toggle" id="menu-toggle" type="button">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</header>
-<nav aria-label="Mobile navigation" class="mobile-nav" hidden="" id="mobile-nav">
-  <a href="#about">About</a>
-  <a href="#research">Research</a>
-  <a href="#experience">Experience</a>
-  <a href="#education">Education</a>
-  <a href="#service">Service</a>
-  <a href="#offtheclock">Life</a>
-  <a href="#contact">Contact</a>
-</nav>
+<div class="frame">
 
-<main id="main">
-
-<!-- ========== HERO ========== -->
-<section aria-labelledby="intro-title" class="intro">
-  <div class="intro-photo-wrap">
-    <svg aria-hidden="true" class="doodle doodle-spark" viewBox="0 0 24 24"><path d="M12 1 L14 10 L23 12 L14 14 L12 23 L10 14 L1 12 L10 10 Z" fill="currentColor"/></svg>
-    <svg aria-hidden="true" class="doodle doodle-spark two" viewBox="0 0 24 24"><path d="M12 1 L14 10 L23 12 L14 14 L12 23 L10 14 L1 12 L10 10 Z" fill="currentColor"/></svg>
-    <svg aria-hidden="true" class="doodle doodle-molecule" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="30" x2="50" y2="50"/><line x1="50" y1="50" x2="80" y2="32"/><line x1="50" y1="50" x2="46" y2="82"/><line x1="80" y1="32" x2="86" y2="10"/><circle cx="22" cy="30" r="8" fill="currentColor" fill-opacity=".25"/><circle cx="50" cy="50" r="10" fill="currentColor" fill-opacity=".35"/><circle cx="80" cy="32" r="7" fill="currentColor" fill-opacity=".25"/><circle cx="46" cy="82" r="7" fill="currentColor" fill-opacity=".25"/><circle cx="86" cy="10" r="4" fill="currentColor"/></svg>
-    <figure class="polaroid">
-      <span aria-hidden="true" class="tape"></span>
-      <img alt="Portrait of Punya Aragula smiling in front of a curved brick wall" fetchpriority="high" height="1200" src="profile.jpg" width="960"/>
-      <figcaption>researcher, in the field</figcaption>
-    </figure>
-    <svg aria-hidden="true" class="doodle doodle-sprout" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M32 60 C32 46 32 38 32 30"/>
-      <path d="M32 34 C22 34 14 28 12 16 C24 16 31 22 32 34 Z" fill="currentColor" fill-opacity=".25"/>
-      <path d="M32 28 C40 28 48 22 50 10 C40 10 33 16 32 28 Z" fill="currentColor" fill-opacity=".25"/>
-    </svg>
-  </div>
-
-  <div class="intro-text">
-    <figure class="epigraph">
-      <blockquote>“The old computing was about what computers could do; the new computing is about what people can do.”</blockquote>
-      <figcaption>Ben Shneiderman, <cite>Leonardo’s Laptop</cite> (2002)</figcaption>
-    </figure>
-    <p class="status-chip"><span aria-hidden="true" class="status-dot"></span>2nd-year PhD student @ UNC · open to summer 2027 research internships</p>
-    <p class="intro-hello">hello there! <span aria-hidden="true" class="sprout-wiggle">🌱</span></p>
-    <h1 id="intro-title">I'm <strong>Punya</strong>. I study how people <span class="squiggle">live with AI</span>, and what their experiences should teach us about how AI is <span class="soft">evaluated and governed.</span></h1>
-    <p class="intro-summary">HCI researcher and PhD student at UNC Chapel Hill, working on AI evaluation, human–AI interaction, and AI governance, with a focus on communities in the Global South.</p>
-    <div class="hero-actions">
-      <a class="btn btn-primary" href="#research">See my research →</a>
-      <a class="btn btn-ghost" href="Punya_Aragula_CV.pdf" rel="noopener noreferrer" target="_blank">Read my CV ↗</a>
-    </div>
-    <p class="intro-note">
-      <svg aria-hidden="true" class="arrow-doodle" viewBox="0 0 60 30" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M3 22 C 15 4, 35 4, 52 16"/><path d="M44 10 L53 16 L45 22"/></svg>
-      say hi at <a href="mailto:punyara@unc.edu">punyara@unc.edu</a>
-    </p>
-  </div>
-</section>
-
-<!-- ========== ABOUT ========== -->
-<section aria-labelledby="about-heading" class="content-section reveal" id="about">
-  <div class="section-head"><h2 id="about-heading">A bit about me</h2></div>
-  <div class="about-grid">
-    <div class="prose">
-      <p>I'm a <strong>second-year PhD student in Information Science</strong> at the School of Data and Information Sciences, <strong>University of North Carolina at Chapel Hill</strong>, advised by <a class="person-link" href="https://sites.google.com/view/maggiemelo" rel="noopener noreferrer" target="_blank">Dr. Marijel (Maggie) Melo</a>. I'm also a graduate researcher at the <strong>Society-Centered AI Lab (SAIL)</strong> with <a class="person-link" href="https://www.cs.unc.edu/~gaikwad/" rel="noopener noreferrer" target="_blank">Dr. Neil Gaikwad</a>.</p>
-      <p>I look at how people come to trust, rely on, and make sense of AI in their own social and cultural contexts, with a focus on communities in the Global South and others rarely consulted in how AI is built and governed. My work combines cross-cultural qualitative and participatory research with conceptual work grounded in the <strong>capability approach</strong>, <strong>bounded rationality</strong>, and <strong>care ethics</strong>.</p>
-      <p>I took an interdisciplinary and winding route to get here, and I think it shapes how I see people and technology. <a class="person-link" href="#education">Follow the path ↓</a></p>
-      <div aria-label="Research interests" class="chips">
-        <span>AI measurement &amp; evaluation</span>
-        <span>Sociotechnical alignment</span>
-        <span>People-centered AI governance</span>
-        <span>Trust in generative AI</span>
-        <span>Global South perspectives</span>
-        <span>Participatory design</span>
+  <!-- ============ SIDEBAR ============ -->
+  <aside class="side" aria-label="Profile">
+    <div class="side-inner">
+      <div class="arch">
+        <img src="profile.jpg" alt="Portrait of Punya Aragula smiling in front of a curved brick wall" width="960" height="1200">
+        <svg class="sprig" viewBox="0 0 60 60" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
+          <path d="M10 54 C 22 40, 30 30, 50 8"/>
+          <path d="M22 40 C 14 36, 10 30, 10 22 C 18 24, 22 30, 22 40 Z" fill="currentColor" fill-opacity=".3"/>
+          <path d="M32 28 C 40 30, 46 26, 50 20 C 42 18, 36 22, 32 28 Z" fill="currentColor" fill-opacity=".3"/>
+        </svg>
       </div>
-    </div>
-    <aside class="rq-card" aria-label="Current focus">
-      <span aria-hidden="true" class="pin">📌</span>
-      <span class="fig-label">LAB NOTES</span>
-      <h3>Current focus</h3>
-      <ul>
-        <li><b>Measurement</b><span>Capability-based metrics for how LLMs, chatbots, and AI search affect people's reproductive health (CARE).</span></li>
-        <li><b>Alignment</b><span>Treating sociotechnical alignment as "good enough" judgment under real-world limits.</span></li>
-        <li><b>Governance</b><span>Who is accountable when AI fails people, and whose experience counts as evidence.</span></li>
+
+      <div class="who">
+        <p class="name">Punya S. Aragula</p>
+        <p class="role">PhD student, Information Science<br>UNC Chapel Hill<br>Society-Centered AI Lab (SAIL)</p>
+        <p class="avail"><span class="pulse" aria-hidden="true"></span>Open to summer 2027 research internships</p>
+      </div>
+
+      <nav class="toc" aria-label="Sections">
+        <a href="#about">About</a>
+        <a href="#publications">Publications</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#methods">Methods</a>
+        <a href="#service">Service</a>
+        <a href="#life">Life</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <ul class="elsewhere" aria-label="Links">
+        <li><a href="mailto:punyara@unc.edu">Email</a></li>
+        <li><a href="Punya_Aragula_CV.pdf" target="_blank" rel="noopener">CV</a></li>
+        <li><a href="https://www.linkedin.com/in/punyasa" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://github.com/punya-aragula" target="_blank" rel="noopener">GitHub</a></li>
       </ul>
-    </aside>
-  </div>
-</section>
 
-<!-- ========== RESEARCH ========== -->
-<section aria-labelledby="research-heading" class="content-section reveal" id="research">
-  <div class="section-head"><h2 id="research-heading">Research</h2></div>
-  <div class="research-categories">
+      <button class="mode" id="mode" type="button" aria-label="Switch to light mode">
+        <span class="mode-dot" aria-hidden="true"></span><span class="mode-text">Light mode</span>
+      </button>
+    </div>
+  </aside>
 
-    <section aria-labelledby="research-cat-01" class="research-category">
-      <div class="research-category-head"><span aria-hidden="true" class="cat-leaf">🌿</span><div><h3 id="research-cat-01">AI measurement, evaluation &amp; sociotechnical alignment</h3><p>Measuring AI's impacts on people with capability-based constructs, and alignment as a bounded, satisficing judgment.</p></div></div>
-      <div class="research-cards">
-        <article class="research-paper featured-paper">
-          <div class="research-paper-top"><span class="paper-year">2026</span><span class="paper-kind review">Under review</span></div>
-          <h4>Alignment Within Bounds: Sociotechnical Alignment as a Satisficing Judgment</h4>
-          <p class="paper-authors"><strong>P. S. Aragula</strong>, N. Gaikwad</p>
-          <p class="paper-description">A conceptual framework for how AI alignment should be judged, treating sociotechnical alignment as a bounded, satisficing judgment and drawing on bounded rationality and Indian philosophical traditions.</p>
-          <div aria-label="Keywords" class="paper-keywords"><span>Sociotechnical Alignment</span><span>Bounded Rationality</span><span>Satisficing</span></div>
-          <div class="research-paper-footer">Under review, <em>ACM FAccT 2027</em></div>
-        </article>
-        <article class="research-paper featured-paper">
-          <div class="research-paper-top"><span class="paper-year">2026</span><span class="paper-kind">Preprint</span></div>
-          <h4><a href="https://arxiv.org/abs/2603.20511" rel="noopener noreferrer" target="_blank">CARE: A Capability-Based Measurement Framework for Reproductive Equity in Human–AI Interaction <span aria-hidden="true" class="project-arrow">↗</span></a></h4>
-          <p class="paper-authors">A. Zhong, P. Chen, <strong>P. S. Aragula</strong>, A. Sharma, K. Brennan, N. Gaikwad</p>
-          <p class="paper-description">A capability-based framework for measuring how LLMs, chatbots, and AI search affect people's sexual and reproductive health, built from constructs grounded in qualitative user studies.</p>
-          <div aria-label="Keywords" class="paper-keywords"><span>Capability Approach</span><span>AI Evaluation</span><span>Reproductive Health</span></div>
-          <div class="research-paper-footer"><em>arXiv preprint</em></div>
-        </article>
+  <!-- ============ CONTENT ============ -->
+  <main class="content" id="content">
+
+    <!-- About -->
+    <section class="block" id="about" aria-labelledby="h-about">
+      <h1 id="h-about" class="lede">I study how people <em class="hl-a">live with AI</em>, and what their experiences should teach us about how AI is <em class="hl-b">evaluated and governed</em>.</h1>
+
+      <div class="about-text">
+        <p>I’m a second-year PhD student in Information Science at the University of North Carolina at Chapel Hill. I’m advised by <a href="https://sites.google.com/view/maggiemelo" target="_blank" rel="noopener">Dr. Marijel (Maggie) Melo</a>, my primary academic advisor, and by <a href="https://www.cs.unc.edu/~gaikwad/" target="_blank" rel="noopener">Dr. Neil Gaikwad</a>, my research advisor for projects in the Society-Centered AI Lab (SAIL), where I’m a graduate researcher.</p>
+        <p>I look at how people come to trust, rely on, and make sense of AI in their own social and cultural contexts, with a focus on communities in the Global South and others rarely consulted in how AI is built and governed. My work combines cross-cultural qualitative and participatory research, and draws on care ethics and Global South philosophies.</p>
+        <p>I took an interdisciplinary and winding route to get here, and I think it shapes how I see people and technology. <a href="#education">Follow the path ↓</a></p>
+      </div>
+
+      <dl class="focus" aria-label="Current SAIL projects">
+        <dt>Current SAIL projects</dt>
+        <dd class="focus-note">With the Society-Centered AI Lab at UNC (PI: Dr. Neil Gaikwad)</dd>
+        <dd><b>Alignment.</b> Co-developed with Dr. Gaikwad a framing of sociotechnical alignment as a bounded, satisficing judgment.</dd>
+        <dd><b>Governance.</b> Contributing to work examining the gap between AI governance as written and as experienced.</dd>
+      </dl>
+    </section>
+
+    <!-- Publications -->
+    <section class="block" id="publications" aria-labelledby="h-pubs">
+      <h2 id="h-pubs" class="block-title">Publications</h2>
+
+      <h3 class="theme t1">Society-Centered AI Lab (SAIL) projects</h3>
+      <p class="theme-note">Sociotechnical alignment, AI governance, and human–AI interaction, with Dr. Neil Gaikwad</p>
+      <ol class="cites">
+        <li>
+          <p class="c-title">Alignment Within Bounds: Sociotechnical Alignment as a Satisficing Judgment</p>
+          <p class="c-auth"><b>Punya S. Aragula</b>, Neil Gaikwad</p>
+          <p class="c-venue"><span class="flag">Under review</span> ACM FAccT 2027</p>
+        </li>
+        <li>
+          <p class="c-title"><a href="https://arxiv.org/abs/2611.16173" target="_blank" rel="noopener">Between Niti and Nyaya: A Society-Centered Framework for AI Governance</a></p>
+          <p class="c-auth">Neil Gaikwad, <b>Punya S. Aragula</b>, Shiva Kruthi Palpanoori, Pratik Patekar</p>
+          <p class="c-venue"><span class="flag">Under review</span> ACM FAccT 2027 · <a href="https://arxiv.org/abs/2611.16173" target="_blank" rel="noopener">arXiv</a></p>
+        </li>
+        <li>
+          <p class="c-title"><a href="https://arxiv.org/abs/2603.20511" target="_blank" rel="noopener">CARE: A Capability-Based Measurement Framework for Reproductive Equity in Human–AI Interaction</a></p>
+          <p class="c-auth">Alice Zhong, Phoebe Chen, <b>Punya S. Aragula</b>, Anika Sharma, Kandyce Brennan, Neil Gaikwad</p>
+          <p class="c-venue"><i>arXiv preprint</i> · <a href="https://arxiv.org/abs/2603.20511" target="_blank" rel="noopener">arXiv</a></p>
+        </li>
+      </ol>
+
+      <h3 class="theme t2">People-centered AI governance &amp; equitable design</h3>
+      <ol class="cites">
+        <li>
+          <p class="c-title"><a href="https://doi.org/10.1145/3806096.3844863" target="_blank" rel="noopener">Beyond the Policy Trap: Building People-Centered AI Governance</a></p>
+          <p class="c-auth"><b>Punya S. Aragula</b>, Marijel Melo, Sarah Bernstein</p>
+          <p class="c-venue">Visionary paper, <i>inaugural ACM AI Leadership Summit</i> · <a href="https://doi.org/10.1145/3806096.3844863" target="_blank" rel="noopener">DOI</a></p>
+        </li>
+        <li>
+          <p class="c-title">Care and Collectivity: Global South Philosophies and Technowomanism as a Vision for Equitable AI Design</p>
+          <p class="c-auth"><b>Punya S. Aragula</b>, Marijel Melo</p>
+          <p class="c-venue">Workshop paper, <i>ACM DIS ’26</i>, Singapore</p>
+        </li>
+      </ol>
+
+      <h3 class="theme t3">Trust, accessibility &amp; community-engaged HCI</h3>
+      <ol class="cites">
+        <li>
+          <p class="c-title">Trust in Generative AI: A Cross-Cultural Study in India and Namibia</p>
+          <p class="c-auth"><b>Punya S. Aragula</b></p>
+          <p class="c-venue">M.S. thesis, Iowa State University</p>
+        </li>
+        <li>
+          <p class="c-title"><a href="https://doi.org/10.5281/zenodo.20784173" target="_blank" rel="noopener">SynthAccess: First Steps Towards Improving Synthesizer Accessibility for Blind Musicians</a></p>
+          <p class="c-auth">Stefanie Koseff, Madeline Mau, Moira Zhang, Ciarra Black, Jason Wallach, Izabella Rodrigues, <b>Punya S. Aragula</b>, R. Luke DuBois, William Payne</p>
+          <p class="c-venue"><i>NIME ’26</i> · <a href="https://doi.org/10.5281/zenodo.20784173" target="_blank" rel="noopener">DOI</a></p>
+        </li>
+        <li>
+          <p class="c-title"><a href="https://doi.org/10.1145/3698061.3734389" target="_blank" rel="noopener">Promoting Collaboration and Empathy in an Arts-Based STEM Engagement Pilot with K-12 Tribal Students</a></p>
+          <p class="c-auth"><b>Punya S. Aragula</b>, Anjali Gali, Kimberly Elman Zarecor</p>
+          <p class="c-venue"><i>ACM Creativity and Cognition (C&amp;C ’25)</i>, 472–476 · <a href="https://doi.org/10.1145/3698061.3734389" target="_blank" rel="noopener">DOI</a></p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- Experience -->
+    <section class="block" id="experience" aria-labelledby="h-exp">
+      <h2 id="h-exp" class="block-title">Experience</h2>
+      <div class="rows">
+        <div class="row">
+          <div class="row-head"><h3>Graduate Researcher, Society-Centered AI Lab (SAIL)</h3><span class="when">Current</span></div>
+          <p class="row-meta">UNC Chapel Hill · PI and research advisor: <a href="https://www.cs.unc.edu/~gaikwad/" target="_blank" rel="noopener">Dr. Neil Gaikwad</a></p>
+          <ul class="did">
+            <li>Co-developed with Dr. Gaikwad a framing of sociotechnical alignment as a bounded, satisficing judgment; first author on the resulting paper (under review).</li>
+            <li>Contribute to the lab’s work examining the gap between AI governance as written and as experienced; co-author on a paper under review.</li>
+            <li>Helped design and run user studies for CARE, a SAIL project.</li>
+          </ul>
+        </div>
+        <div class="row">
+          <div class="row-head"><h3>Graduate Researcher, N.C. Department of Information Technology</h3></div>
+          <p class="row-meta">Raleigh, NC · North Carolina AI Leadership Council</p>
+          <p>Gathered background information and resource maps for the Council and its subcommittees during the development of North Carolina’s <a href="https://it.nc.gov/documents/statewide-ai-strategic-roadmap/download" target="_blank" rel="noopener">Statewide AI Strategic Roadmap</a>.</p>
+        </div>
+        <div class="row">
+          <div class="row-head"><h3>Graduate Researcher, UNC Chapel Hill</h3></div>
+          <p class="row-meta">PI: <a href="https://williepayne.com/" target="_blank" rel="noopener">Dr. William Payne</a></p>
+          <p>Helped design and fabricate tactile learning materials for SynthAccess, a project in Dr. Payne’s lab on making music synthesizers accessible to blind and low-vision learners; co-author on the resulting NIME ’26 paper.</p>
+        </div>
+        <div class="row">
+          <div class="row-head"><h3>Graduate Researcher, Iowa State University</h3></div>
+          <p class="row-meta">Ames, IA · Advisor: <a href="https://faculty.sites.iastate.edu/zarecor/" target="_blank" rel="noopener">Dr. Kimberly Elman Zarecor</a></p>
+          <p>Designed and conducted an 18-interview study of how people in India and Namibia come to trust generative AI for my M.S. thesis, and co-designed an arts-based STEM pilot with K-12 Tribal students.</p>
+        </div>
+        <div class="row">
+          <div class="row-head"><h3>Graduate Researcher, NSF Rural Shrink Smart Project</h3></div>
+          <p class="row-meta">Iowa State University · Ames, IA</p>
+          <p>Conducted interviews and focus groups on belonging, bonding, and bridging in shrinking rural Iowa towns.</p>
+        </div>
       </div>
     </section>
 
-    <section aria-labelledby="research-cat-02" class="research-category">
-      <div class="research-category-head"><span aria-hidden="true" class="cat-leaf">🌻</span><div><h3 id="research-cat-02">Human–AI interaction &amp; trust</h3><p>How people come to trust, rely on, and engage with AI, plus accessible and community-engaged design.</p></div></div>
-      <div class="research-cards">
-        <article class="research-paper featured-paper">
-          <div class="research-paper-top"><span class="paper-year">2025</span><span class="paper-kind">Thesis</span></div>
-          <h4>Trust in Generative AI: A Cross-Cultural Study in India and Namibia</h4>
-          <p class="paper-authors"><strong>P. S. Aragula</strong></p>
-          <p class="paper-description">An independent qualitative study of how people in India and Namibia come to trust, rely on, and use generative AI tools, comparing how cultural context shapes trust.</p>
-          <div class="paper-metrics"><div class="metric-box"><b>18</b><span>interviews across India &amp; Namibia</span></div></div>
-          <div aria-label="Keywords" class="paper-keywords"><span>Trust in AI</span><span>Cross-Cultural HCI</span><span>Thematic Analysis</span></div>
-          <div class="research-paper-footer">Iowa State University <span class="pill">M.S. thesis</span></div>
-        </article>
-        <article class="research-paper">
-          <div class="research-paper-top"><span class="paper-year">2026</span><span class="paper-kind">Published</span></div>
-          <h4><a href="https://doi.org/10.5281/zenodo.20784173" rel="noopener noreferrer" target="_blank">SynthAccess: First Steps Towards Improving Synthesizer Accessibility for Blind Musicians <span aria-hidden="true" class="project-arrow">↗</span></a></h4>
-          <p class="paper-authors">S. Koseff, M. Mau, M. Zhang, C. Black, J. Wallach, I. Rodrigues, <strong>P. S. Aragula</strong>, R. L. DuBois, W. Payne</p>
-          <p class="paper-description">Tactile learning artifacts that make music synthesizers accessible to blind and low-vision learners.</p>
-          <div class="research-paper-footer"><em>NIME '26</em></div>
-        </article>
-        <article class="research-paper">
-          <div class="research-paper-top"><span class="paper-year">2025</span><span class="paper-kind">Published</span></div>
-          <h4><a href="https://doi.org/10.1145/3698061.3734389" rel="noopener noreferrer" target="_blank">Promoting Collaboration and Empathy in an Arts-Based STEM Engagement Pilot with K-12 Tribal Students <span aria-hidden="true" class="project-arrow">↗</span></a></h4>
-          <p class="paper-authors"><strong>P. S. Aragula</strong>, A. Gali, K. E. Zarecor</p>
-          <p class="paper-description">Co-design and evaluation of an arts-based STEM engagement pilot with K-12 Tribal students.</p>
-          <div class="research-paper-footer"><em>ACM C&amp;C '25</em>, 472–476</div>
-        </article>
+    <!-- Education -->
+    <section class="block" id="education" aria-labelledby="h-edu">
+      <h2 id="h-edu" class="block-title">Education</h2>
+      <ol class="path">
+        <li><span class="stop" aria-hidden="true">🧬</span><h3>B.Sc. (Hons.) Biology</h3><p>Azim Premji University, Bengaluru</p></li>
+        <li><span class="stop" aria-hidden="true">🧠</span><h3>M.Sc. Neuropsychology</h3><p>National Forensic Sciences University, Gandhinagar</p></li>
+        <li><span class="stop" aria-hidden="true">🖥️</span><h3>M.S. Human–Computer Interaction</h3><p>Iowa State University</p><p class="adv">Advisor: <a href="https://faculty.sites.iastate.edu/zarecor/" target="_blank" rel="noopener">Dr. Kimberly Elman Zarecor</a></p></li>
+        <li class="here"><span class="stop" aria-hidden="true">🎓</span><span class="yrs">2025 – present</span><h3>Ph.D. Information Science</h3><p>UNC Chapel Hill</p><p class="adv">Advisor: <a href="https://sites.google.com/view/maggiemelo" target="_blank" rel="noopener">Dr. Marijel (Maggie) Melo</a></p><p class="adv">Research advisor: <a href="https://www.cs.unc.edu/~gaikwad/" target="_blank" rel="noopener">Dr. Neil Gaikwad</a></p></li>
+      </ol>
+    </section>
+
+    <!-- Methods -->
+    <section class="block" id="methods" aria-labelledby="h-methods">
+      <h2 id="h-methods" class="block-title">Methods &amp; expertise</h2>
+      <div class="methods">
+        <div class="m-col">
+          <h3>Designing studies</h3>
+          <p>Qualitative and mixed-methods study design · cross-cultural comparative studies (India, Namibia, U.S.) · interview protocol development · participatory design, co-design workshops, and community-based participatory research (CBPR)</p>
+        </div>
+        <div class="m-col">
+          <h3>Gathering evidence</h3>
+          <p>Semi-structured in-depth interviews and focus groups · task-based user studies of LLMs, chatbots, and AI search · think-aloud protocols · survey design and usability testing · policy and landscape scans</p>
+        </div>
+        <div class="m-col">
+          <h3>Analyzing &amp; writing</h3>
+          <p>Reflexive thematic analysis and qualitative coding · cross-cultural comparative analysis · document and policy analysis of AI governance frameworks · conceptual and policy-facing writing</p>
+        </div>
       </div>
     </section>
 
-    <section aria-labelledby="research-cat-03" class="research-category">
-      <div class="research-category-head"><span aria-hidden="true" class="cat-leaf">🌳</span><div><h3 id="research-cat-03">AI governance, institutions &amp; equitable design</h3><p>The gap between AI governance as written and as experienced.</p></div></div>
-      <div class="research-cards">
-        <article class="research-paper featured-paper">
-          <div class="research-paper-top"><span class="paper-year">2026</span><span class="paper-kind review">Under review</span></div>
-          <h4><a href="https://arxiv.org/abs/2611.16173" rel="noopener noreferrer" target="_blank">Between Niti and Nyaya: A Society-Centered Framework for AI Governance <span aria-hidden="true" class="project-arrow">↗</span></a></h4>
-          <p class="paper-authors">N. Gaikwad, <strong>P. S. Aragula</strong>, S. K. Palpanoori, P. Patekar</p>
-          <p class="paper-description">A society-centered framework for AI governance that distinguishes rules as written from justice as people actually experience it.</p>
-          <div aria-label="Keywords" class="paper-keywords"><span>AI Governance</span><span>Indian Philosophy</span><span>Society-Centered AI</span></div>
-          <div class="research-paper-footer">Under review, <em>ACM FAccT 2027</em> · arXiv preprint</div>
-        </article>
-        <article class="research-paper">
-          <div class="research-paper-top"><span class="paper-year">2026</span><span class="paper-kind">Published</span></div>
-          <h4><a href="https://doi.org/10.1145/3806096.3844863" rel="noopener noreferrer" target="_blank">Beyond the Policy Trap: Building People-Centered AI Governance <span aria-hidden="true" class="project-arrow">↗</span></a></h4>
-          <p class="paper-authors"><strong>P. S. Aragula</strong>, M. Melo, S. Bernstein</p>
-          <p class="paper-description">Argues for moving AI governance beyond policy documents toward the lived experience of the people it affects.</p>
-          <div class="research-paper-footer">Visionary paper, <em>inaugural ACM AI Leadership Summit '26</em></div>
-        </article>
-        <article class="research-paper">
-          <div class="research-paper-top"><span class="paper-year">2026</span><span class="paper-kind">Workshop</span></div>
-          <h4>Care and Collectivity: Global South Philosophies and Technowomanism as a Vision for Equitable AI Design</h4>
-          <p class="paper-authors"><strong>P. S. Aragula</strong>, M. Melo</p>
-          <div class="research-paper-footer">Workshop at <em>ACM DIS '26</em>, Singapore</div>
-        </article>
+    <!-- Service -->
+    <section class="block" id="service" aria-labelledby="h-service">
+      <h2 id="h-service" class="block-title">Service</h2>
+      <ul class="plain">
+        <li><span>Reviewer, AAAI/ACM Conference on AI, Ethics, and Society (AIES)</span></li>
+        <li><span>Contributor, SIGACCESS white paper on participant recruitment in accessibility research</span></li>
+        <li><span>Student Volunteer, ACM ASSETS 2025 and ACM CHI PLAY 2025</span></li>
+      </ul>
+    </section>
+
+    <!-- Life -->
+    <section class="block" id="life" aria-labelledby="h-life">
+      <h2 id="h-life" class="block-title">Off the clock</h2>
+      <p class="prose-line">Beyond research, I enjoy cooking up storms 👩🏽‍🍳🍚🍽️, tending to my vegetable garden, and making different kinds of art. <span class="hint">Tap a photo to see it larger.</span></p>
+      <div class="shelf">
+        <div class="shelf-col">
+          <p class="shelf-label">Garden &amp; nature 🌶️</p>
+          <a class="snap" href="photos/garden-chilies.jpg" data-cap="homegrown chilies"><img src="photos/garden-chilies-sm.jpg" alt="Bright red chilies growing among green leaves" loading="lazy" width="675" height="900"><span>homegrown chilies</span></a>
+          <a class="snap" href="photos/nature-bees.jpg" data-cap="learning to harvest honey"><img src="photos/nature-bees-sm.jpg" alt="Punya smiling in a white protective suit, holding up a frame covered in honeybees" loading="lazy" width="675" height="900"><span>learning to harvest honey</span></a>
+        </div>
+        <div class="shelf-col">
+          <p class="shelf-label">Cooked &amp; eaten 🍲</p>
+          <a class="snap" href="photos/food-thali-1.jpg" data-cap="kitchen experiment no. 1"><img src="photos/food-thali-1-sm.jpg" alt="A steel plate of rice, chickpeas, curry and a vegetable side, in the sun" loading="lazy" width="675" height="900"><span>kitchen experiment no. 1</span></a>
+          <a class="snap" href="photos/food-plate-colour.jpg" data-cap="kitchen experiment no. 2"><img src="photos/food-plate-colour-sm.jpg" alt="A steel plate with chickpeas, okra, a white vegetable side and golden fried dumplings on a deep red cloth" loading="lazy" width="675" height="900"><span>kitchen experiment no. 2</span></a>
+        </div>
+        <div class="shelf-col">
+          <p class="shelf-label">Ink &amp; paper 🎨</p>
+          <a class="snap" href="photos/art-elephant.jpg" data-cap="Madhubani elephant"><img src="photos/art-elephant-sm.jpg" alt="A colourful folk-art drawing of an elephant beneath a tree, with a purple background and patterned border" loading="lazy" width="675" height="900"><span>Madhubani elephant</span></a>
+          <a class="snap" href="photos/art-portrait-trees.jpg" data-cap="nature on my mind"><img src="photos/art-portrait-trees-sm.jpg" alt="A black-and-white ink portrait of a woman whose hair turns into trees, on a bright yellow background" loading="lazy" width="675" height="900"><span>nature on my mind</span></a>
+        </div>
       </div>
     </section>
 
-  </div>
-</section>
+    <!-- Contact -->
+    <section class="block closing" id="contact" aria-labelledby="h-contact">
+      <svg class="divider" viewBox="0 0 240 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <path d="M4 12 H96"/><path d="M144 12 H236"/>
+        <path d="M120 20 C 120 14, 120 10, 120 4"/>
+        <path d="M120 12 C 112 12, 106 8, 104 2 C 112 2, 118 6, 120 12 Z" fill="currentColor" fill-opacity=".3"/>
+        <path d="M120 10 C 128 10, 134 6, 136 0 C 128 0, 122 4, 120 10 Z" fill="currentColor" fill-opacity=".3"/>
+      </svg>
+      <blockquote class="keller">
+        <p>“Alone we can do so little; together we can do so much.”</p>
+        <footer>Helen Keller</footer>
+      </blockquote>
+      <h2 id="h-contact" class="block-title">Get in touch</h2>
+      <p class="prose-line">Research is better when it’s shared. If you’re working on how people experience AI, building ways to evaluate it more fairly, or just want to swap notes (or recipes), I’d love to hear from you.</p>
+      <p class="mail"><a href="mailto:punyara@unc.edu">punyara@unc.edu</a></p>
+    </section>
 
-<!-- ========== EXPERIENCE ========== -->
-<section aria-labelledby="exp-heading" class="content-section reveal" id="experience">
-  <div class="section-head"><h2 id="exp-heading">Experience</h2></div>
-  <ul class="vine">
-    <li>
-      <div class="exp-time">Apr 2026 – now</div>
-      <h3>Graduate Researcher <span class="dim">· Society-Centered AI Lab (SAIL), UNC Chapel Hill</span></h3>
-      <span class="exp-place">Chapel Hill, NC · PI: <a class="person-link" href="https://www.cs.unc.edu/~gaikwad/" rel="noopener noreferrer" target="_blank">Dr. Neil Gaikwad</a></span>
-      <p>Building frameworks for judging AI alignment and governance, and leading qualitative studies of how chatbots and AI search shape people’s reproductive health, which informed the CARE framework.</p>
-    </li>
-    <li>
-      <div class="exp-time">Jan 2026 – Apr 2026</div>
-      <h3>Graduate Researcher <span class="dim">· N.C. Department of Information Technology (NCDIT)</span></h3>
-      <span class="exp-place">Raleigh, NC · North Carolina AI Leadership Council</span>
-      <p>Contributed background research and resource maps to North Carolina’s <a href="https://it.nc.gov/documents/statewide-ai-strategic-roadmap/download" rel="noopener noreferrer" target="_blank">Statewide AI Strategic Roadmap ↗</a>.</p>
-    </li>
-    <li>
-      <div class="exp-time">Aug 2025 – Apr 2026</div>
-      <h3>Graduate Researcher <span class="dim">· UNC Chapel Hill</span></h3>
-      <span class="exp-place">Chapel Hill, NC · PI: <a class="person-link" href="https://williepayne.com/" rel="noopener noreferrer" target="_blank">Dr. William Payne</a></span>
-      <p>Designed and fabricated tactile learning tools that make music synthesizers accessible to blind and low-vision learners (NIME ’26).</p>
-    </li>
-    <li>
-      <div class="exp-time">Nov 2023 – May 2025</div>
-      <h3>Graduate Researcher <span class="dim">· Iowa State University</span></h3>
-      <span class="exp-place">Ames, IA · Advisor: <a class="person-link" href="https://faculty.sites.iastate.edu/zarecor/" rel="noopener noreferrer" target="_blank">Dr. Kimberly Elman Zarecor</a></span>
-      <p>Led an 18-interview study of how people in India and Namibia come to trust generative AI (M.S. thesis), and co-designed an arts-based STEM pilot with K-12 Tribal students.</p>
-    </li>
-    <li>
-      <div class="exp-time">Nov 2023 – Apr 2024</div>
-      <h3>Graduate Researcher <span class="dim">· NSF Rural Shrink Smart Project</span></h3>
-      <span class="exp-place">Ames, IA</span>
-      <p>Ran interviews and focus groups on belonging, bonding, and bridging in shrinking rural Iowa towns.</p>
-    </li>
-  </ul>
-  <a class="inline-cta" href="Punya_Aragula_CV.pdf" rel="noopener noreferrer" target="_blank">Full academic CV ↗</a>
-</section>
-
-<!-- ========== EDUCATION ========== -->
-<section aria-labelledby="edu-heading" class="content-section reveal" id="education">
-  <div class="section-head"><h2 id="edu-heading">Education</h2></div>
-  <ol class="edu-path">
-    <li>
-      <span aria-hidden="true" class="edu-dot">🧬</span>
-      <span class="edu-years">2015 – 2018</span>
-      <h3>B.Sc. (Hons.) Biology</h3>
-      <p class="edu-school">Azim Premji University<br/>Bengaluru, India</p>
-    </li>
-    <li>
-      <span aria-hidden="true" class="edu-dot">🧠</span>
-      <span class="edu-years">2018 – 2020</span>
-      <h3>M.Sc. Neuropsychology</h3>
-      <p class="edu-school">National Forensic Sciences University<br/>Gandhinagar, India</p>
-    </li>
-    <li>
-      <span aria-hidden="true" class="edu-dot">🖥️</span>
-      <span class="edu-years">2023 – 2025</span>
-      <h3>M.S. Human–Computer Interaction</h3>
-      <p class="edu-school">Iowa State University<br/>Ames, IA</p>
-      <p class="edu-advisor">Advisor: <a class="person-link" href="https://faculty.sites.iastate.edu/zarecor/" rel="noopener noreferrer" target="_blank">Dr. Kimberly Elman Zarecor</a></p>
-    </li>
-    <li class="edu-now">
-      <span aria-hidden="true" class="edu-dot">🎓</span>
-      <span class="edu-years">2025 – present</span>
-      <h3>Ph.D. Information Science</h3>
-      <p class="edu-school">University of North Carolina at Chapel Hill</p>
-      <p class="edu-advisor">Advisor: <a class="person-link" href="https://sites.google.com/view/maggiemelo" rel="noopener noreferrer" target="_blank">Dr. Marijel (Maggie) Melo</a></p>
-    </li>
-  </ol>
-
-</section>
-
-<!-- ========== SERVICE ========== -->
-<section aria-labelledby="service-heading" class="content-section reveal" id="service">
-  <div class="section-head"><h2 id="service-heading">Service</h2></div>
-  <ul class="service-list">
-    <li><span aria-hidden="true" class="star">✦</span><span><strong>Reviewer</strong>, AAAI/ACM Conference on AI, Ethics, and Society (AIES) <span class="yr">· 2026</span></span></li>
-    <li><span aria-hidden="true" class="star">✦</span><span><strong>Contributor</strong>, SIGACCESS white paper on participant recruitment in accessibility research <span class="yr">· 2025</span></span></li>
-    <li><span aria-hidden="true" class="star">✦</span><span><strong>Student Volunteer</strong>, ACM ASSETS 2025 and ACM CHI PLAY 2025 <span class="yr">· 2025</span></span></li>
-  </ul>
-</section>
-
-<!-- ========== TOOLKIT ========== -->
-<section aria-labelledby="toolkit-heading" class="content-section reveal" id="toolkit">
-  <div class="section-head"><h2 id="toolkit-heading">Methods &amp; expertise</h2></div>
-  <div class="methods-grid">
-    <div class="method-card">
-      <span aria-hidden="true" class="method-icon">🧭</span>
-      <h3>Designing studies</h3>
-      <ul>
-        <li>Qualitative and mixed-methods study design</li>
-        <li>Cross-cultural comparative studies (India, Namibia, U.S.)</li>
-        <li>Interview protocol development</li>
-        <li>Participatory design, co-design workshops, and community-based participatory research (CBPR)</li>
-      </ul>
-    </div>
-    <div class="method-card">
-      <span aria-hidden="true" class="method-icon">🎙️</span>
-      <h3>Gathering evidence</h3>
-      <ul>
-        <li>Semi-structured in-depth interviews and focus groups</li>
-        <li>Task-based user studies of LLMs, chatbots, and AI search</li>
-        <li>Think-aloud protocols</li>
-        <li>Survey design and usability testing</li>
-        <li>Policy and landscape scans</li>
-      </ul>
-    </div>
-    <div class="method-card">
-      <span aria-hidden="true" class="method-icon">🔍</span>
-      <h3>Analyzing</h3>
-      <ul>
-        <li>Reflexive thematic analysis and qualitative coding</li>
-        <li>Cross-cultural comparative analysis</li>
-        <li>Document and policy analysis of AI governance frameworks</li>
-        <li>Building theory and frameworks from qualitative evidence</li>
-      </ul>
-    </div>
-    <div class="method-card">
-      <span aria-hidden="true" class="method-icon">🌉</span>
-      <h3>Translating evidence</h3>
-      <ul>
-        <li>Turning qualitative findings into evaluation constructs and frameworks</li>
-        <li>Capability-based assessment of technology’s impacts on people</li>
-        <li>Policy-facing writing and recommendations</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-
-<!-- ========== OFF THE CLOCK: PHOTOGRAPHY & INTERESTS ========== -->
-<!-- To add a photo: export it into photos/ as name.jpg (large) and name-sm.jpg (small), then copy one <figure> line. -->
-<section aria-labelledby="photo-heading" class="content-section reveal" id="offtheclock">
-  <div class="section-head"><h2 id="photo-heading">Off the clock</h2><span class="section-aside">things I grow, cook &amp; draw</span></div>
-  <p class="section-intro">Beyond research, I enjoy cooking up storms 👩🏽‍🍳🍚🍽️, tending to my vegetable garden, and making different kinds of art. <span class="hint">Tap any photo to see it larger.</span></p>
-
-  <div class="field-columns">
-    <div class="field-col">
-      <span class="fig-label">GARDEN &amp; NATURE 🌶️</span>
-      <div class="gallery">
-      <figure><a class="zoom" href="photos/garden-chilies.jpg" data-caption="homegrown chilies"><img src="photos/garden-chilies-sm.jpg" alt="Bright red chilies growing among green leaves" loading="lazy" width="675" height="900"/></a><figcaption>homegrown chilies</figcaption></figure>
-      <figure><a class="zoom" href="photos/nature-bees.jpg" data-caption="learning to harvest honey"><img src="photos/nature-bees-sm.jpg" alt="Punya smiling in a white protective suit, holding up a frame covered in honeybees" loading="lazy" width="675" height="900"/></a><figcaption>learning to harvest honey</figcaption></figure>
-      </div>
-    </div>
-    <div class="field-col">
-      <span class="fig-label">COOKED &amp; EATEN 🍲</span>
-      <div class="gallery">
-      <figure><a class="zoom" href="photos/food-thali-1.jpg" data-caption="kitchen experiment no. 1"><img src="photos/food-thali-1-sm.jpg" alt="A steel plate of rice, chickpeas, curry and a vegetable side, in the sun" loading="lazy" width="675" height="900"/></a><figcaption>kitchen experiment no. 1</figcaption></figure>
-      <figure><a class="zoom" href="photos/food-plate-colour.jpg" data-caption="kitchen experiment no. 2"><img src="photos/food-plate-colour-sm.jpg" alt="A steel plate with chickpeas, okra, a white vegetable side and golden fried dumplings on a deep red cloth" loading="lazy" width="675" height="900"/></a><figcaption>kitchen experiment no. 2</figcaption></figure>
-      </div>
-    </div>
-    <div class="field-col">
-      <span class="fig-label">INK &amp; PAPER 🎨</span>
-      <div class="gallery">
-      <figure><a class="zoom" href="photos/art-elephant.jpg" data-caption="Madhubani elephant"><img src="photos/art-elephant-sm.jpg" alt="A colourful folk-art drawing of an elephant beneath a tree, with a purple background and patterned border" loading="lazy" width="675" height="900"/></a><figcaption>Madhubani elephant</figcaption></figure>
-      <figure><a class="zoom" href="photos/art-portrait-trees.jpg" data-caption="nature on my mind"><img src="photos/art-portrait-trees-sm.jpg" alt="A black-and-white ink portrait of a woman whose hair turns into trees, on a bright yellow background" loading="lazy" width="675" height="900"/></a><figcaption>nature on my mind</figcaption></figure>
-      </div>
-    </div>
-  </div>
-
-</section>
-
-<div class="lightbox" id="lightbox" hidden="" role="dialog" aria-modal="true" aria-label="Photo viewer">
-  <button class="lightbox-close" type="button" aria-label="Close photo">✕</button>
-  <figure><img alt="" src=""/><figcaption></figcaption></figure>
+    <footer class="foot">
+      <p>© <span id="yr">2026</span> Punya S. Aragula · Last updated November 2026</p>
+      <p class="credit">An earlier version of this site was adapted from <a href="https://dhruv-dixit-709.github.io/" target="_blank" rel="noopener">Dhruv Dixit’s website</a>.</p>
+    </footer>
+  </main>
 </div>
 
-<!-- ========== CONTACT ========== -->
-<section aria-labelledby="contact-heading" class="contact-section reveal" id="contact">
-  <figure class="contact-quote">
-    <blockquote>“Alone we can do so little; together we can do so much.”</blockquote>
-    <figcaption>Helen Keller</figcaption>
-  </figure>
-  <h2 id="contact-heading">Let’s talk.</h2>
-  <p>Research is better when it’s shared. If you’re working on how people experience AI, building ways to evaluate it more fairly, or just want to swap notes (or recipes), I’d love to hear from you.</p>
-  <a class="contact-button" href="mailto:punyara@unc.edu">Say hello 👋</a>
-  <div class="contact-links">
-    <a href="mailto:punyara@unc.edu">Email</a>
-    <a href="https://www.linkedin.com/in/punyasa" rel="noopener noreferrer" target="_blank">LinkedIn ↗</a>
-    <a href="Punya_Aragula_CV.pdf" rel="noopener noreferrer" target="_blank">Academic CV ↗</a>
-  </div>
-</section>
-</main>
-
-<footer class="site-footer">
-  <span>© <span id="copyright-year">2026</span> Punya S. Aragula · <span class="hand">grown with care 🌱</span></span>
-  <a class="top-link" href="#top">Back to top ↑</a>
-</footer>
-</div>
+<dialog class="viewer" id="viewer" aria-label="Photo viewer">
+  <figure><img src="" alt=""><figcaption></figcaption></figure>
+  <button type="button" class="viewer-x" aria-label="Close photo">Close</button>
+</dialog>
 </body>
 </html>
